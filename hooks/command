@@ -82,4 +82,4 @@ if [[ "${debug_mode:-off}" =~ (on) ]] ; then
     "${BUILDKITE_COMMAND}" >&2
 fi
 
-docker run "${args[@]}" "${BUILDKITE_PLUGIN_DOCKER_IMAGE}" bash -c "${BUILDKITE_COMMAND}"
+docker run "${args[@]}" "${BUILDKITE_PLUGIN_DOCKER_IMAGE}" bash -ce "${BUILDKITE_COMMAND}"
